@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-    private List<Double> school = new ArrayList<>();
+    private List<Integer> school = new ArrayList<>();
 
-    public School(Double... school) {
-        for (Double quantity : school)
+    public School(Integer... school) {
+        for (Integer quantity : school)
             this.school.add(quantity);
 
     }
@@ -16,9 +16,9 @@ public class School {
         return "School" + school.toString();
     }
 
-    public double getAverage() {
-        double sum = 0.0;
-        for (double quantity : school)
+    public int getAverage() {
+        int sum = 0;
+        for (int quantity : school)
             sum += quantity;
         return sum;
 

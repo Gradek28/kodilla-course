@@ -11,9 +11,9 @@ public class SchoolDirectory {
         Principal candy = new Principal("Candy" , "Rose" , "I LO");
         Principal mateo = new Principal("Mateo" , "Luigi" , "II LO");
 
-        School johnSchool = new School(20.0, 16.0, 28.0, 26.0);
-        School candySchool = new School(30.0, 19.0, 32.0);
-        School mateoSchool = new School(35.0, 19.0, 29.0, 14.0, 31.0, 33.0);
+        School johnSchool = new School(20, 16, 28, 26);
+        School candySchool = new School(30, 19, 32);
+        School mateoSchool = new School(35, 19, 29, 14, 31, 33);
 
         host.put(john, johnSchool );
         host.put(candy, candySchool);
