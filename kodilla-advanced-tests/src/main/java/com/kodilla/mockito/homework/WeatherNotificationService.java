@@ -1,37 +1,29 @@
 package com.kodilla.mockito.homework;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.*;
+
 
 public class WeatherNotificationService {
-    private Client client;
-
-    public void addSubscriber(Client client) {
-        this.clients.add(client);
-
+    Map<Location, Set<Client>> clients = new HashMap<>();
+    public void addSubscriber(Client client, Location location) {
+        Set<Client> subscribers = clients.getOrDefault(location, new HashSet<>());
+        subscribers.add(client);
+        clients.put(location, subscribers);
     }
 
-    private List<Client> clients = new ArrayList<>();
-
-
-    public void sendNotification(Notification notification) {
-        this.clients.forEach(client -> client.receive(notification));
+    public void sendNotification(Notification notification, Location location) {
+        Set<Client> subscribers = clients.getOrDefault(location, new HashSet<>());
+        subscribers.forEach(client -> client.receive(notification));
     }
 
-    public void addLocation(Location location) {
-    }
-
-    public void deleteAllLocations(Location location) {
-        this.clients.remove(location);
-    }
-
-    public void removeSubscriber(Client client) {
-        this.clients.remove(client);
+    public void removeSubscriber(Client client, Location location) {
+        Set<Client> subscribers = clients.getOrDefault(location, new HashSet<>());
+        subscribers.remove(client);
+        clients.put(location, subscribers);
     }
 
     public void deleteLocation(Location location) {
-        this.clients.remove(location);
-
+        clients.remove(location);
     }
 }
