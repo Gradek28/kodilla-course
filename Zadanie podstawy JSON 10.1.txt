@@ -1,0 +1,23 @@
+{
+  "nazwa_samochodu": "Alfa Romeo Giulia",
+  "marka_samochodu": "Alfa Romeo",
+  "fotele": [
+    {
+      "materiał": "skóra",
+      "kolor": "czarny"
+    },
+    {
+      "materiał": "skóra",
+      "kolor": "czarny"
+    },
+    {
+      "materiał": "skóra",
+      "kolor": "czarny"
+    },
+    {
+      "materiał": "skóra",
+      "kolor": "czarny"
+    }
+  ],
+  "pojemność_silnika": 2.9
+}
