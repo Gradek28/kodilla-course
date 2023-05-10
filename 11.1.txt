@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car>
+  <make>Alfa Romeo</make>
+  <model>Giulia QV</model>
+  <year>2021</year>
+  <color>red</color>
+  <engine>
+    <type>V6</type>
+    <capacity>2.9L</capacity>
+    <power>505 hp</power>
+  </engine>
+  <transmission>
+    <type>Automatic</type>
+    <gears>8</gears>
+  </transmission>
+</car>
+
+xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	     targetNamespace="http://www.kodilla.com"
+	     xmlns="http://www.kodilla.com"
+	     elementFromDefalut="qualified">
+           <xs:element name="car">
+  <xs:complexType>
+   <xs:sequence>
+      <xs:element name="make" type="xs:string"/>
+      <xs:element name="model" type="xs:string"/>
+      <xs:element name="year" type="xs:integer"/>
+      <xs:element name="color" type="xs:string"/>
+      <xs:element name="engine">
+        <xs:complexType>
+         <xs:sequence>
+           <xs:element name="type" type="xs:string"/>
+           <xs:element name="capacity" type="xs:string"/>
+           <xs:element name="power" type="xs:string"/>
+            </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="transmission">
+          <xs:complexType>
+          <xs:sequence>
+           	<xs:element name="type" type="xs:string"/>
+            <xs:element name="gears" type="xs:integer"/>
+          </xs:sequence>
+          </xs:complexType>
+          </xs:element>
+      
+</xs:schema>
