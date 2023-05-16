@@ -1,0 +1,2 @@
+ Myśle, że w błędzie "Expected element 'course@http://kodilla.com/courses/soap' before the end of the content in element getCourseResponse@http://kodilla.com/courses/soap" oczekiwano elementu 'course' w odpowiedzi zamiast cancelowania zawartości.
+To nam podpowiada, że jest obecny problem z odpowiedzią. W żądaniu oczekiwany jest element 'course' ale w odpowiedzi już go brakuje.
